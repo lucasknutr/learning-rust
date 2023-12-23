@@ -41,3 +41,33 @@ fn esp32Button() {
         sleep(Duration::from_millis(100));
     }
 }
+
+fn isFlamengoFirst(){
+    let mut flamengo = Team::new("Flamengo");
+    let mut vasco = Team::new("Vasco");
+    let mut botafogo = Team::new("Botafogo");
+    let mut fluminense = Team::new("Fluminense");
+    let mut teams = [flamengo, vasco, botafogo, fluminense];
+    let mut first = 0;
+    let mut second = 0;
+    let mut third = 0;
+    let mut fourth = 0;
+    for team in teams.iter() {
+        if team.points > first {
+            fourth = third;
+            third = second;
+            second = first;
+            first = team.points;
+        } else if team.points > second {
+            fourth = third;
+            third = second;
+            second = team.points;
+        } else if team.points > third {
+            fourth = third;
+            third = team.points;
+        } else if team.points > fourth {
+            fourth = team.points;
+        }
+    }
+    println!("{} {} {} {}", first, second, third, fourth);
+}
