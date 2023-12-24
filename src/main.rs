@@ -71,3 +71,14 @@ fn isFlamengoFirst(){
     }
     println!("{} {} {} {}", first, second, third, fourth);
 }
+
+fn sumOfArrays() {
+    let mut array1 = [1, 2, 3, 4, 5];
+    let mut array2 = [6, 7, 8, 9, 10];
+    let mut array3 = [0, 0, 0, 0, 0];
+    for i in 0..5 {
+        array3[i] = array1[i] + array2[i];
+    }
+    println!("{:?}", array3);
+}
+
