@@ -1,3 +1,10 @@
+use std::fs::File;
+use std::io::prelude::*;
+use std::thread::sleep;
+use std::time::Duration;
+use gpio_cdev::{Chip, LineRequestFlags};
+use std::error::Error;
+
 fn main() {
     let number = sum(23, 12);
     println!("{}", number);
