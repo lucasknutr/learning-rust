@@ -89,3 +89,12 @@ fn sumOfArrays() {
     println!("{:?}", array3);
 }
 
+fn testino() {
+    let mut array = [1, 2, 3, 4, 5];
+    let mut array2 = [0, 0, 0, 0, 0];
+    for i in 0..5 {
+        array2[i] = array[i] * 2;
+    }
+    println!("{:?}", array2);
+}
+
